@@ -1,0 +1,25 @@
+<div *ngIf="products">
+    <div *ngFor="let p of products._embedded.products">
+        <div class="=col-md-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">{{p.name}}</div>
+            <div class="panel-body">
+
+                <table>
+                    <tr>
+                        <td>
+                            <img height="75" src="http://pngimg.com/uploads/box/box_PNG49.png"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            {{p.currentPrice|number:'0.2'}}DH
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>    
+        </div>
+    </div>
+</div>
